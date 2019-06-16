@@ -18,11 +18,11 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Tabs(),
-      onGenerateRoute: (settings) {
+      onGenerateRoute: (RouteSettings settings) {
         final String name = settings.name;
         final Function pageContentBuilder = this.routes[name];
         if (pageContentBuilder != null) {
-          if (settings.arguments != null) {
+          if (settings != null) {
             
           }
         }
